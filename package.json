@@ -6,7 +6,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,7 +25,7 @@
   ],
   "devDependencies": {
     "husky": "^1.2.0",
-    "prettier": "^1.15.3",
+    "prettier": "^1.17.0",
     "pretty-quick": "^1.8.0"
   }
 }
