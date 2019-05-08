@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import style from '../Connexion.module.css';
 
 class SignInForm extends Component {
+  handleSubmit = () => this.props.handleCancel();
   render() {
     return (
-      <form>
+      <form className={style.Connexion}>
         <label>
           Alias:
           <input type="text" name="alias" />
@@ -12,7 +14,13 @@ class SignInForm extends Component {
           Password:
           <input type="text" name="pass1" />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" onClick={this.handleSubmit} />
+        <input
+          type="button"
+          name="cancelCourse"
+          value="cancel"
+          onClick={this.props.handleCancel}
+        />
       </form>
     );
   }

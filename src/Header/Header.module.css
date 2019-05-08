@@ -1,17 +1,33 @@
-.div {
+.header {
   display: flex;
-  background-color: darkslategray;
+  background: linear-gradient(#38352c, transparent);
   width: 100%;
-  justify-content: center;
+  height: 10%;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
 }
-.div > a {
-  width: 80px;
+
+.header-left {
+  display: flex;
+  justify-content: left;
+}
+
+.header-right {
+  display: flex;
+  justify-content: right;
+}
+
+.header-text {
   height: auto;
-  color: darkslategray;
-  background-color: beige;
-  border: 2px solid darkgreen;
+  color: white;
+  height: 30px;
+  background: linear-gradient(#38352c, transparent);
   border-radius: 20%;
   font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
   text-align: center;
   vertical-align: middle;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 0 5px;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import style from '../Connexion.module.css';
+
 class SignUpForm extends Component {
   constructor() {
     super();
@@ -11,7 +13,7 @@ class SignUpForm extends Component {
     const data = new FormData(event.target);
     console.log(event.target);
 
-    fetch('http://192.168.1.10:8080/users/signup', {
+    fetch('http://localhost:3001/users/signup', {
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -22,7 +24,7 @@ class SignUpForm extends Component {
   }
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={style.Connexion} onSubmit={this.handleSubmit}>
         <label>
           Alias:
           <input type="text" name="alias" />
@@ -41,6 +43,12 @@ class SignUpForm extends Component {
         </label>
 
         <input type="submit" value="Submit" />
+        <input
+          type="button"
+          name="cancelCourse"
+          value="cancel"
+          onClick={this.props.handleCancel}
+        />
       </form>
     );
   }
