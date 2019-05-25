@@ -1,9 +1,10 @@
-.Connexion {
+.Profile {
   position: fixed;
-  top: 10%;
-  left: 30%;
+  top: 2%;
+  bottom: 0%;
+  left: 0%;
   font-family: 'Open Sans Condensed', arial, sans;
-  width: 500px;
+  width: 100%;
   padding: 30px;
   background: beige;
   margin: 50px auto;
@@ -16,7 +17,7 @@
   outline: 9999px solid rgba(0, 0, 0, 0.8);
 }
 
-.Connexion h2 {
+.Profile h2 {
   background: #4d4d4d;
   text-transform: uppercase;
   font-family: 'Open Sans Condensed', sans-serif;
@@ -26,17 +27,17 @@
   padding: 20px;
   margin: -30px -30px 30px -30px;
 }
-.Connexion input[type='text'],
-.Connexion input[type='date'],
-.Connexion input[type='datetime'],
-.Connexion input[type='email'],
-.Connexion input[type='number'],
-.Connexion input[type='search'],
-.Connexion input[type='time'],
-.Connexion input[type='url'],
-.Connexion input[type='password'],
-.Connexion textarea,
-.Connexion select {
+.Profile input[type='text'],
+.Profile input[type='date'],
+.Profile input[type='datetime'],
+.Profile input[type='email'],
+.Profile input[type='number'],
+.Profile input[type='search'],
+.Profile input[type='time'],
+.Profile input[type='url'],
+.Profile input[type='password'],
+.Profile textarea,
+.Profile select {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -51,12 +52,12 @@
   font: 16px Arial, Helvetica, sans-serif;
   height: 45px;
 }
-.Connexion textarea {
+.Profile textarea {
   resize: none;
   overflow: hidden;
 }
-.Connexion input[type='button'],
-.Connexion input[type='submit'] {
+.Profile input[type='button'],
+.Profile input[type='submit'] {
   -moz-box-shadow: inset 0px 1px 0px 0px #45d6d6;
   -webkit-box-shadow: inset 0px 1px 0px 0px #45d6d6;
   box-shadow: inset 0px 1px 0px 0px #45d6d6;
@@ -71,8 +72,8 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.Connexion input[type='button']:hover,
-.Connexion input[type='submit']:hover {
+.Profile input[type='button']:hover,
+.Profile input[type='submit']:hover {
   background: linear-gradient(to bottom, #34caca 5%, #30c9c9 100%);
   background-color: #34caca;
 }
