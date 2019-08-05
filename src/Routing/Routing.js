@@ -4,6 +4,7 @@ import { SignInForm } from '../Connexion/SignInForm';
 import { SignUpForm } from '../Connexion/SignUpForm';
 import { Profile } from '../Pages/Profile';
 import { Welcome } from '../Pages/Welcome';
+import { Stories } from '../Pages/Stories';
 
 class Routing extends Component {
   handleCancel = () => this.props.history.push('/');
@@ -37,6 +38,7 @@ class Routing extends Component {
             <Profile {...props} handleCancel={this.handleCancel} />
           )}
         />
+        <Route path="/stories/" render={props => <Stories {...props} />} />
         <Route path="/" component={Welcome} />
       </div>
     );

@@ -14,6 +14,9 @@ class Header extends Component {
           <NavLink className={styles['header-text']} to="/profile/">
             Profile
           </NavLink>
+          <NavLink className={styles['header-text']} to="/stories/">
+            Stories
+          </NavLink>
         </div>
         <div className={styles['header-right']}>
           <NavLink className={styles['header-text']} to="/signin/">
