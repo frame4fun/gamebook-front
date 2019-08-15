@@ -1,48 +1,20 @@
-import React, { Component } from 'react';
-import { Route, withRouter } from 'react-router-dom';
-import { SignInForm } from '../Connexion/SignInForm';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import { Login } from '../Connexion/Login';
 import { SignUpForm } from '../Connexion/SignUpForm';
 import { Profile } from '../Pages/Profile';
 import { Welcome } from '../Pages/Welcome';
 import { Stories } from '../Pages/Stories';
+import { PrivateRoute } from '../components/PrivateRoute';
 
-class Routing extends Component {
-  handleCancel = () => this.props.history.push('/');
+const Routing = () => (
+  <div>
+    <Route path="/login" component={Login} />
+    <Route path="/signup" component={SignUpForm} />
+    <PrivateRoute path="/profile" component={Profile} />
+    <PrivateRoute path="/stories" component={Stories} />
+    <Route path="/" component={Welcome} />
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <Route
-          path="/signin/"
-          render={props => (
-            <SignInForm
-              {...props}
-              handleCancel={this.handleCancel}
-              handleChange={this.handleChange}
-            />
-          )}
-        />
-        <Route
-          path="/signup/"
-          render={props => (
-            <SignUpForm
-              {...props}
-              handleCancel={this.handleCancel}
-              handleChange={this.handleChange}
-            />
-          )}
-        />
-        <Route
-          path="/profile/"
-          render={props => (
-            <Profile {...props} handleCancel={this.handleCancel} />
-          )}
-        />
-        <Route path="/stories/" render={props => <Stories {...props} />} />
-        <Route path="/" component={Welcome} />
-      </div>
-    );
-  }
-}
-
-export default withRouter(Routing);
+export default Routing;
