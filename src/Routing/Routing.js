@@ -12,7 +12,7 @@ const Routing = () => (
     <Route path="/login" component={Login} />
     <Route path="/signup" component={SignUpForm} />
     <PrivateRoute path="/profile" component={Profile} />
-    <PrivateRoute path="/stories" component={Stories} />
+    <Route path="/stories" component={Stories} />
     <Route path="/" component={Welcome} />
   </div>
 );
