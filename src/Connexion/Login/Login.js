@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, useHistory, useLocation } from 'react-router-dom';
 import style from '../Connexion.module.css';
 
-const Login = ({ history }) => {
+const Login = () => {
+  let history = useHistory();
+  let location = useLocation();
+
+  let { from } = location.state || { from: { pathname: '/' } };
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,7 +21,7 @@ const Login = ({ history }) => {
       },
       method: 'POST',
       body: JSON.stringify({ email, password }),
-    }).then(() => history.push('/'));
+    }).then(() => history.replace(from));
   };
 
   return (
