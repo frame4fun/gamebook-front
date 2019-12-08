@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Login } from '../Connexion/Login';
 import { SignUpForm } from '../Connexion/SignUpForm';
 import { Profile } from '../Pages/Profile';
@@ -8,13 +8,23 @@ import { Stories } from '../Pages/Stories';
 import { PrivateRoute } from '../components/PrivateRoute';
 
 const Routing = () => (
-  <div>
-    <Route path="/login" component={Login} />
-    <Route path="/signup" component={SignUpForm} />
-    <PrivateRoute path="/profile" component={Profile} />
-    <Route path="/stories" component={Stories} />
-    <Route path="/" component={Welcome} />
-  </div>
+  <Switch>
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/signup">
+      <SignUpForm />
+    </Route>
+    <PrivateRoute path="/profile">
+      <Profile />
+    </PrivateRoute>
+    <Route path="/stories">
+      <Stories />
+    </Route>
+    <Route path="/">
+      <Welcome />
+    </Route>
+  </Switch>
 );
 
 export default Routing;
